@@ -1,0 +1,9 @@
+# Allowlist strategy: ignore everything, then re-include only curated,
+# shareable artifacts. New churn/secret dirs that appear in ~/.claude
+# over time are excluded by default — they must be explicitly un-ignored.
+*
+!.gitignore
+!README.md
+!settings.json
+!skills/
+!skills/**

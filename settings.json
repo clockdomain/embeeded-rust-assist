@@ -1,0 +1,86 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git commit:*)",
+      "Bash(find:*)",
+      "Bash(PYTHONPATH=\"$PYTHONPATH:pw_dev_server/py\" python3 -m pytest:*)",
+      "Bash(sudo apt-get update:*)",
+      "Bash(sudo apt-get install:*)",
+      "Bash(rustup +nightly component add:*)",
+      "Bash(cargo build:*)",
+      "Bash(rust-objdump:*)",
+      "Bash(cargo +nightly objdump:*)",
+      "Bash(python3 -c \"import sys; print\\(sys.version\\)\")",
+      "Bash(pip3 --version)",
+      "Bash(docker compose up -d)",
+      "Bash(chmod +x ~/dev/gerrit-docker/seed.sh)",
+      "Bash(python3 -m venv .venv)",
+      "Bash(source .venv/bin/activate)",
+      "Bash(pip install \"mcp[cli]>=1.0.0\" httpx pydantic)",
+      "Bash(python -m py_compile server.py)",
+      "Bash(python -m py_compile gerrit_client.py)",
+      "Bash(bash ~/dev/gerrit-docker/seed.sh)",
+      "Bash(GERRIT_BASE_URL=\"http://localhost:8080\" GERRIT_USERNAME=\"admin\" GERRIT_HTTP_PASSWORD=\"__REDACTED__\" .venv/bin/python -c \":*)",
+      "Read(//home/ferro/.claude/**)",
+      "Bash(git config user.name \"Anthony Rocha\")",
+      "Bash(git config user.email \"anthony.reese.rocha@gmail.com\")",
+      "Bash(git log --oneline -20 --all -- target/ast1060* services/i2c*)",
+      "Bash(bazel build //pw_kernel/tests/executor/user:executor_test)",
+      "Bash(ls /home/ferro/work/executor/.bazelisk*)",
+      "Bash(ls /home/ferro/work/executor/tools/bazel*)",
+      "Bash(ls /home/ferro/work/executor/WORKSPACE*)",
+      "Bash(ls /home/ferro/.cache/bazelisk/*/bin/bazel)",
+      "Bash(elf2tab --version)",
+      "Bash(bloaty --version)",
+      "Bash(gh --version)",
+      "Bash(cargo xtask --help)",
+      "Bash(rust-size --version)",
+      "Bash(rust-readelf --version)",
+      "Bash(rust-nm --version)",
+      "Bash(readelf --version)",
+      "Bash(size --version)",
+      "WebSearch",
+      "Bash(grep -E \"\\\\.\\(rs|md\\)$\")",
+      "Bash(readelf -S /home/ferro/work/convergence/caliptra-mcu-sw/target/riscv32imc-unknown-none-elf/release/user-app)",
+      "Bash(cargo tree --depth 1 -p user-app)",
+      "Bash(cargo xtask build app/ast1060-mctp-echo/app.toml)",
+      "Bash(cargo xtask dist app/ast1060-mctp-echo/app.toml)",
+      "Bash(rm /home/ferro/work/demo/openprot/services/mctp/api/src/handle.rs)",
+      "Bash(cargo check -p openprot-mctp-api -p openprot-mctp-server)",
+      "Bash(cargo check -p openprot-mctp-server)",
+      "Bash(cargo check)",
+      "Bash(cargo test -p openprot-mctp-server --test echo)",
+      "Bash(cargo check -p openprot-mctp-api -p openprot-mctp-server -p openprot-mctp-client)",
+      "Bash(cargo test -p openprot-mctp-api -p openprot-mctp-server -p openprot-mctp-client)",
+      "Bash(python3 -c \"import json; json.load\\(open\\('/home/ferro/dev/bundle/workflows.json'\\)\\); print\\('json ok'\\)\")",
+      "Bash(./pw ast10x0_qemu_tests)",
+      "Bash(command -v bazel bazelisk)",
+      "Read(//usr/local/bin/**)",
+      "Bash(bazelisk version *)",
+      "Bash(./pw ast10x0 *)",
+      "Bash(curl -fsSL https://go.dev/VERSION?m=text)",
+      "Bash(ln -sf __TRACKED_VAR__/go/bin/bazelisk __TRACKED_VAR__/.local/bin/bazelisk)",
+      "Bash(bazelisk build *)",
+      "Bash(mkdir -p /tmp/qemu-artifact)",
+      "Read(//tmp/**)",
+      "Bash(rm -rf ./*)",
+      "Bash(gh run *)"
+    ],
+    "additionalDirectories": [
+      "/home/ferro"
+    ]
+  },
+  "enabledPlugins": {
+    "rust-analyzer-lsp@claude-plugins-official": true,
+    "andrej-karpathy-skills@karpathy-skills": true
+  },
+  "extraKnownMarketplaces": {
+    "karpathy-skills": {
+      "source": {
+        "source": "github",
+        "repo": "forrestchang/andrej-karpathy-skills"
+      }
+    }
+  },
+  "skipDangerousModePermissionPrompt": true
+}
